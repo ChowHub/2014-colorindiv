@@ -16,6 +16,9 @@ outdir = 'out'
 #Cycle through data
 vnames = c('Stim', 'Response', 'SetSize')
 numSubs = length(dir(dirname))
+# TODO: this loop is awful.
+#       since the .mat files were renamed, the next 3 lines need to be updated
+#       to load the renamed data!
 for (ii in dir()){
 	if (substr(ii,1,5)=="VSTMz" && substr(ii, nchar(ii)-2, nchar(ii)) != 'mat') numSubs = numSubs +1
 }
